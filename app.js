@@ -2,6 +2,7 @@
 var  pass = document.getElementById("password");
 var  msg = document.getElementById("message");
 var  str = document.getElementById("strength");
+let eyeicon = document.getElementById("eyeicon");
 
 pass.addEventListener('input',()=>{
    if(pass.value.length > 0){
@@ -28,3 +29,15 @@ if(pass.value.length  >= 8){
 
 
 })
+// Add hide and show password character//
+
+eyeicon.onclick = function (){
+    if(password.type == "password"){
+        password.type = "text"
+        eyeicon.src ="eye-open.png"
+    }
+    else{
+        password.type = "password"
+        eyeicon.src ="eye-close.png"
+    }
+}
